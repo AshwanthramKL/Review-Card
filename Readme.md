@@ -22,8 +22,8 @@ Users should be able to:
 
 - View the optimal layout for the app depending on their device's screen size
 - See hover states for all interactive elements on the page
-- 
-- See the background color of the website change upon click of button.
+- See the Review change upon click of buttons.
+- Generate random review.
 
 ### Screenshot
 
@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution URL](https://github.com/AshwanthramKL/Color-Flipper)
-- Live Site URL: [Live site URL](https://ashwanthramkl.github.io/Color-Flipper/)
+- Solution URL: [Solution URL](https://github.com/AshwanthramKL/Review-Card)
+- Live Site URL: [Live site URL](https://ashwanthramkl.github.io/Review-Card/)
 
 ## My process
 
