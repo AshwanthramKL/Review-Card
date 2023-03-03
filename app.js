@@ -35,18 +35,41 @@ let author = document.querySelector('#author');
 let job = document.querySelector('#job');
 let info = document.querySelector('#info');
 
-const nxtBtn = document.querySelector('#next-btn');
-const prevBtn = document.querySelector('#prev-btn');
-const randomBtn = document.querySelector('#random-btn');
+const nxtBtn = document.querySelector('.next-btn');
+const prevBtn = document.querySelector('.prev-btn');
+const randomBtn = document.querySelector('.random-btn');
 
 let curentItem = 0;
 
-// Load initial item
-
-document.addEventListener('DOMContentLoaded', () => {
+function modifyDetails(){
   var item = reviews[Math.abs(curentItem)%4]; 
   personImg.src = item.img;
   author.textContent = item.name;
   job.textContent = item.job;
   info.textContent = item.text;
+}
+
+function generateRandom(){
+  let num = Math.floor(Math.random()*reviews.length);
+  // console.log(num);
+  return num;
+}
+// Load initial item
+document.addEventListener('DOMContentLoaded', modifyDetails);
+
+// Prev-btn and Next-btn
+
+prevBtn.addEventListener('click', () =>{
+  curentItem--;
+  modifyDetails();
+})
+
+nxtBtn.addEventListener('click', () =>{
+  curentItem++;
+  modifyDetails();
+})
+
+randomBtn.addEventListener('click', () =>{
+  curentItem = generateRandom();
+  modifyDetails();
 })
